@@ -1,0 +1,50 @@
+$primary_color: #3b5b78;
+$secondary_color: #b17069;
+$txt_color: #686868;
+$primary_font: 'minerva-modern', sans-serif;
+$secondary_font: 'HalimunRegular';
+$txt_font: 'open-sans', sans-serif;
+ 
+$browser-context: 16px;
+@function em($pixels, $context: $browser-context) {
+    @return ($pixels / $context) * 1em;
+}
+%paragraph {
+    font-family: 'Open Sans';
+    font-size: 16px;
+    margin-bottom: 35px;
+}
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
+}
+.btn {
+    padding: 10px 70px;
+    border-radius: 5px;
+    background-color: #fa8e27;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: #ffffff;
+    border: none;
+    text-decoration: none;
+    transition: 300ms;
+    &:hover {
+        background-color: transparent;
+        color: #fa8e27;
+    }
+}
+.main-container {
+    width: 80%;
+	margin-right: auto;
+	margin-left: auto;
+	@media (max-width: 768px) {
+		width: 100%;
+	}
+}
